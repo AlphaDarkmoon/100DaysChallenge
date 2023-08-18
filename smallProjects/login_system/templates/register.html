@@ -1,0 +1,36 @@
+{%load static %}
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">Register</h1>
+        <div class="card">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" placeholder="Username" name="username">
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="pass">
+                <input type="password" placeholder="Confirm Password" name="cpass">
+                <div class="buttons">
+                  <a href="{% url 'login' %}" class="register-link">Login</a>
+                    <button type="submit" class="login-button">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
